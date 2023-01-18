@@ -1,7 +1,7 @@
 baseurl = "https://blist.vercel.app"
 metaDataFormat = "yaml"
 title = "Supplier Ori"
-theme = "blist"
+theme = ""
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
