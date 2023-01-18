@@ -21,11 +21,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '19'
+          node-version: '19.3.0'
           cache: 'npm'
-          cache-dependency-path: '*/package-lock.json'
+          cache-dependency-path: 'subdir/package-lock.json'
 
-      - run: npm ci --gc
+      - run: npm ci
       
       - name: Build with Hugo
         env:
