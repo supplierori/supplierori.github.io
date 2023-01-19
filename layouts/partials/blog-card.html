@@ -1,16 +1,13 @@
 <div class="p-2">
 <a href="{{ .Permalink }}">
+  <div class="mb-2 text-xl font-semibold text-center">{{ .Params.title }}</div>
   {{ if .Params.thumbnail }}
   <div class="relative">
     <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-full object-cover" />
-    {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
-    <div class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
-      {{ .Params.Price | lang.FormatCurrency 2 "IDR" }}
-    </div>
-    {{ end }}
   </div>
   {{ end }}
-  <div class="pt-4 my-2 text-xl font-semibold text-center">{{ .Params.title }}</div>
+  <div class="pt-4 text-l font-semibold text-center text-red-400 line-through">{{ .Params.Price | lang.FormatCurrency 2 "IDR" }}</div>
+  <div class="text-l font-semibold text-center text-green-600">{{ .Params.Diskon | lang.FormatCurrency 2 "IDR" }}</div>
 </a>
 {{ if not (or (or .Site.Params.hideOtherLanguages .Params.hideOtherLanguages) false) }}
   {{ if .IsTranslated -}}
