@@ -11,19 +11,19 @@ DefaultContentLanguageInSubdir = true
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "Welcome to $SiteName"
-      introSubtitle = "Providing your needs of $CompanyField with utmost care. Seamless shopping flow in your hands."
+      introTitle = "Selamat datang!"
+      introSubtitle = "Kami menyediakan dan melayani pengiriman berbagai aksesoris handphone ke seluruh Indonesia."
       introPhoto = "/picture.jpg"
       logo = "/logozyro.svg"
-    [[languages.en.menu.main]]
-        name = "Products"
-        url = "products"
-        weight = 1
+    #[[languages.en.menu.main]]
+    #    name = "Produk"
+    #    url = "products"
+    #    weight = 1
 
-    [[languages.en.menu.main]]
-        name = "About Us"
-        url = "page/about/"
-        weight = 2
+    #[[languages.en.menu.main]]
+    #    name = "About Us"
+    #    url = "page/about/"
+    #    weight = 2
 
 [params]
   # Enable the darkmode toggle in header
@@ -74,6 +74,8 @@ DefaultContentLanguageInSubdir = true
   # Thumbnails in home and blog pages will still be shown
   # This setting can also be in page's markdown file
   hidePageThumbnail = false
+  
+  QR = "/QR.jpg"
 
 # Comments system
 [params.comments]
@@ -100,8 +102,8 @@ DefaultContentLanguageInSubdir = true
 
 [params.homepage.social]
   # Global params common for both languages
-  title = "Follow us"
-  description = "Providing goods you need."
+  title = "Order melalui Whatsapp dengan scan QRCode di samping atau link di bawah ini."
+  description = "https://www,whatsapp.com/"
 
   [[params.homepage.social.icons]]
     website = "twitter"
@@ -157,10 +159,6 @@ DefaultContentLanguageInSubdir = true
   [[params.homepage.social.icons]]
     website = "behance"
     url = "https://behance.net"
-
-[[menu.main]]
-  name = "About"
-  url = "/about"
 
 [build]
   writeStats = true
