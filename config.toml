@@ -1,20 +1,20 @@
 baseurl = "https://supplierori.github.io"
 metaDataFormat = "yaml"
 title = "Supplier Ori"
-theme = ""
+theme = "blist"
 
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "id"
 DefaultContentLanguageInSubdir = true
 [languages]
-  [languages.en]
-    contentDir = "content/en" #English
+  [languages.id]
+    contentDir = "content/id"
     weight = 1
-    languageName = "English"
-    [languages.en.params]
+    languageName = "Indonesian"
+    [languages.id.params]
       introTitle = "Selamat datang!"
       introSubtitle = "Kami menyediakan dan melayani pengiriman berbagai aksesoris handphone ke seluruh Indonesia."
-      introPhoto = "/picture.jpg"
-      logo = "/logozyro.svg"
+      introPhoto = "/intro.png"
+      logo = "/logoheader.png"
     #[[languages.en.menu.main]]
     #    name = "Produk"
     #    url = "products"
@@ -48,7 +48,7 @@ DefaultContentLanguageInSubdir = true
 
   # Custom copyright - optional
   copyright = "Copyright © 2023"
-  favicon = "/logozyro.svg"
+  favicon = "/logo.png"
 
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
@@ -75,7 +75,7 @@ DefaultContentLanguageInSubdir = true
   # This setting can also be in page's markdown file
   hidePageThumbnail = false
   
-  QR = "/QR.jpg"
+  QR = "/WQR.png"
 
 # Comments system
 [params.comments]
@@ -102,8 +102,8 @@ DefaultContentLanguageInSubdir = true
 
 [params.homepage.social]
   # Global params common for both languages
-  title = "Order melalui Whatsapp dengan scan QRCode di samping atau link di bawah ini."
-  description = "https://www,whatsapp.com/"
+  title = "Order melalui Whatsapp dengan scan QRCode atau link di bawah ini."
+  description = "https://wa.me/6289649257929?text=Saya%20ingin%20memesan%20di%20SupplierOri"
 
   [[params.homepage.social.icons]]
     website = "twitter"

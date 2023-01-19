@@ -1,12 +1,12 @@
 <div class="{{ .Site.Params.ascentColor | default "bg-pink-50" }} dark:bg-gray-900">
-  <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <div class="container px-2 py-12 mx-auto max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 justify-items-center items-center text-center sm:text-left">
     <div>
-      <div class="text-xl mb-2">{{ .Site.Params.homepage.social.title }}</div>
-      <a href class="opacity-60">{{ .Site.Params.homepage.social.description }}</a>
-    </div>
-
+      <img class="shadow-sm md:justify-center" src="{{ .Site.Params.QR }}" alt="Order" />
+    </div>    
+    
     <div>
-      <img class="rounded-lg shadow-sm" src="{{ .Site.Params.QR }}" alt="Order" />
+      <div class="text-l mb-2">{{ .Site.Params.homepage.social.title }}</div>
+      <a href="{{ .Site.Params.homepage.social.description }}" class="opacity-60" target="_blank" rel="noopener noreferrer">Order via Whatsapp</a>
     </div>
   </div>
 </div>

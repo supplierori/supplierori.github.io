@@ -2,7 +2,7 @@
 <a href="{{ .Permalink }}">
   {{ if .Params.thumbnail }}
   <div class="relative">
-    <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
+    <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-full object-cover" />
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
     <div class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
       {{ .Params.Price | lang.FormatCurrency 2 "IDR" }}
@@ -23,8 +23,8 @@
     </div>
   {{- end }}
 {{ end }}
-<a href="{{ .Site.Params.homepage.social.description }}">
-  <button class="container my-2 bg-white hover:bg-green-600 text-gray-800 hover:text-white font-semibold py-2 px-4 border border-gray-800 rounded">Order via Whatsapp</button>
+<a href="{{ .Site.Params.homepage.social.description }}" target="_blank" rel="noopener noreferrer">
+  <button class="container my-2 bg-white hover:bg-gray-800 text-gray-800 hover:text-white font-semibold py-2 px-4 border border-gray-800 rounded">Order via Whatsapp</button>
 </a>
 </div>
 
