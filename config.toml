@@ -24,6 +24,51 @@ DefaultContentLanguageInSubdir = true
     #    name = "About Us"
     #    url = "page/about/"
     #    weight = 2
+  
+
+    
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+           
+[[menu.main]]
+    identifier = "iPhone"
+    name = "iPhone"
+    url = "/tags/iPhone"
+    weight = 2
+    
+[[menu.main]]
+    name = "Fast Charging"
+    url = "/tags/Fast Charging"
+    parent = "iPhone"
+    weight = 1
+    
+[[menu.main]]
+    name = "Standard Charging"
+    url = "/tags/Standard Charging"
+    parent = "iPhone"
+    weight = 2   
+        
+[[menu.main]]
+    identifier = "Samsung"
+    name = "Samsung"
+    url = "/tags/Samsung"
+    weight = 3
+
+[[menu.main]]
+    name = "Micro USB"
+    produk = "Samsung"
+    url = "/tags/Micro"
+    parent = "Samsung"
+    weight = 1
+    
+[[menu.main]]
+    name = "Type C"
+    produk = "Samsung"
+    url = "/tags/Type C"
+    parent = "Samsung"
+    weight = 2   
 
 [params]
   # Enable the darkmode toggle in header
@@ -42,8 +87,7 @@ DefaultContentLanguageInSubdir = true
     "categories",
     "summary",
     "content",
-    "link",
-    "author"
+    "link"
   ]
 
   # Custom copyright - optional
@@ -64,7 +108,7 @@ DefaultContentLanguageInSubdir = true
 
   # To hide "Other languages" option if the post is available in multiple languages
   # Can be used at site level or page level
-  hideOtherLanguages = true
+  hideOtherLanguages = false
 
   # Add support for Table of contents
   # Can be added to a page level also in markdown frontmatter
@@ -76,6 +120,8 @@ DefaultContentLanguageInSubdir = true
   hidePageThumbnail = false
   
   QR = "/WQR.png"
+  
+  assetDir = "assets"
 
 # Comments system
 [params.comments]

@@ -1,0 +1,8 @@
+{{ $star := $.Params.rating }}
+{{ range seq 5 }}
+  {{ if lt . (add (int $star) 1) }}
+    <span class="fa fa-star checked"></span>
+  {{ else }}
+    <span class="fa fa-star"></span>
+ {{ end }}
+{{ end }}

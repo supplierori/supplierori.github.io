@@ -10,7 +10,10 @@
 
   <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
 
-    <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
+    <h1 class="text-2xl font-bold -mb-4">{{ .Title }}</h1>
+    <h5 class="text-left mb-2">
+      {{- partial "rating.html" . -}} {{ .Params.reviews }} reviews
+    </h5>
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
     <h5 class="text-sm flex items-center flex-wrap">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="green" class="w-6 h-6">
@@ -25,9 +28,13 @@
       Gratis Biaya Pengiriman
     </h5>
     
+
+    
+    
+    
     <div class="container px-3 py-8 mx-auto max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 justify-items-center items-center text-center sm:text-left divide-x">
       <div>
-        <h5 class="text-xl text-center line-through text-red-600 -m-2">
+        <h5 class="text-xl text-center line-through text-red-600 -m-2 italic">
         {{ .Params.Price | lang.FormatCurrency 2 "IDR" }}
         </h5>
       </div>    
