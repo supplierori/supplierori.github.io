@@ -1,0 +1,29 @@
+testi: 
+  - id: 12
+    nama: "Wulan"
+    rating: 5
+    date: 2023-01-14
+    image: /slideshow/image1.jpg
+    video: "https://www.youtube.com/watch?v=i43tkaTXtwI"
+    testimoni: "Produk mendarat dengan aman dan terbukti orisinil."
+  - id: 12
+    nama: "Andini"
+    rating: 4
+    date: 2023-01-16
+    image: null
+    video: null
+    testimoni: "Kualitas produk bagus tapi sayang pelayanannya kurang cepat."
+  - id: 10
+    nama: "Warsito"
+    rating: 2
+    date: 2023-01-10
+    image: /slideshow/image2.jpg
+    video: null
+    testimoni: "Busuk."
+  - id: 10
+    nama: "Harun"
+    rating: 5
+    date: 2023-01-25
+    image: null
+    video: "https://www.youtube.com/watch?v=i43tkaTXtwI"
+    testimoni: "Barang bagus, sukses selalu."

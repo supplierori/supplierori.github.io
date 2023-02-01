@@ -3,13 +3,23 @@
   {{ $datestr := (partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "long")) }}
 
   {{ if (and .Params.thumbnail (not (or .Site.Params.hidePageThumbnail .Params.hidePageThumbnail)) ) }}
-  <div class="relative max-w-5xl mx-auto px-4">
-    <img src="{{ .Params.thumbnail }}" class="rounded-lg shadow-sm w-full object-contain" />
+  <div id="carousel10" class="carousel md:hidden block" duration="3000" items="1">
+    <ul>
+      {{ range $index, $slide := .Params.folderimg }}
+        <li id="c10_slide{{ add $index 1}}" style="min-width: calc(100%/1); padding-bottom: 100%;"><img src="{{ $slide }}" alt="" /><div></div></li>
+      {{ end }}
+    </ul>
+    <ol>
+      {{ range $index, $page := .Params.folderimg }}
+        <li><a href="#c10_slide{{ add $index 1 }}"></a></li>
+      {{ end }}
+    </ol>
+    <div class="prev">&lsaquo;</div>
+    <div class="next">&rsaquo;</div>
   </div>
   {{ end }}
 
   <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
-
     <h1 class="text-2xl font-bold -mb-4">{{ .Title }}</h1>
     <h5 class="text-left mb-2">
       {{- partial "rating.html" . -}} {{ .Params.reviews }} reviews
@@ -28,10 +38,6 @@
       Gratis Biaya Pengiriman
     </h5>
     
-
-    
-    
-    
     <div class="container px-3 py-8 mx-auto max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 justify-items-center items-center text-center sm:text-left divide-x">
       <div>
         <h5 class="text-xl text-center line-through text-red-600 -m-2 italic">
@@ -47,9 +53,18 @@
     </div>
         
     <h5>
-      <a href="{{ .Site.Params.homepage.social.description }}" target="_blank" rel="noopener noreferrer">
-        <button class="container mb-8 bg-green-400 hover:bg-green-800 text-black hover:text-white font-semibold py-2 px-4 rounded">Beli</button>
-      </a>
+      <div class="container flex py-6 mx-auto max-w-full grid grid-cols-1">
+        <a href="{{ .Site.Params.homepage.social.description }}" target="_blank" rel="noopener noreferrer">
+          <button class="container flex mx-auto grid-cols-2 mb-8 bg-green-400 hover:bg-green-800 text-black hover:text-white font-semibold py-2 px-4 rounded items-center justify-center">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+          </div>
+          <div class="ml-4">Beli Sekarang</div>
+          </button>
+        </a>
+      </div>
     </h5>    
 
     {{ end }}
@@ -60,7 +75,7 @@
 
     {{ .Content }}
   </article>
-  {{- partial "comments.html" . -}}
+
   
   {{- partial "social.html" . -}}
 {{ end }}

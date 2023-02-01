@@ -1,0 +1,20 @@
+  <div id="carousel10" class="carousel text-gray-900" duration="9000" items="1">
+    <ul>
+      {{ range $index, $testim := where .Site.Data.reviews.testi "id" $.Params.id }}
+        <li id="c10_slide{{ add $index 1}}" class="container grid-cols" style="min-width: calc(100%/1); padding-bottom: 100%;">
+          <div>Review oleh {{ $testim.nama }}</div>
+          <div>{{ $testim.date }}</div>
+          <div>{{ $testim.testimoni }}</div>    
+        </li>
+      {{ end }}
+    </ul>
+    <ol>
+      {{ range $index, $page := where .Site.Data.reviews.testi "id" $.Params.id }}
+        <li><a href="#c10_slide{{ add $index 1 }}"></a></li>
+      {{ end }}
+    </ol>
+    <div class="prev">&lsaquo;</div>
+    <div class="next">&rsaquo;</div>
+  </div>
+
+
